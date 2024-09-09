@@ -1,4 +1,4 @@
-deb/*
+# deb/*
 killport.sh
 models
 models/*
