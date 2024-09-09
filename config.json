@@ -14,7 +14,7 @@
             "voice": "Sabela",
             "lang": "gl",
             "model_type": "coqui",
-	    "preprocessor": "cotovia_preprocessor_tra3",
+	        "preprocessor": "cotovia_preprocessor_tra3",
             "tts_config_path": "sabela/sabela_config.json",
             "tts_model_path": "sabela/sabela.pth",
             "load": true
@@ -23,10 +23,10 @@
             "voice": "Icia",
             "lang": "gl",
             "model_type": "coqui",
-	    "preprocessor": "cotovia_preprocessor_tra3",
+	        "preprocessor": "cotovia_preprocessor_tra3",
             "tts_config_path": "icia/icia_config.json",
             "tts_model_path": "icia/icia.pth",
-            "load": false
+            "load": true
         }
     ]
 }
