@@ -11,14 +11,14 @@ A demo app with Galician, using this systems but with another interface is avail
 Start by cloning this repository and create your models directory:
 ```
 git clone https://github.com/proxectonos/NOS-TTS-API.git
-cd TTS-API
+cd NOS-TTS-API
 mkdir models
 ```
 
 To run the API you need to first fetch your models and put them under the directory `models` (or know their exact path in your system). e.g.
 
 ```
-TTS-API
+NOS-TTS-API
     ↳ ...
     ↳ models
     	↳ my-tts-model.pth
