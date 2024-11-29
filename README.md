@@ -10,7 +10,7 @@ A demo app with Galician, using this systems but with another interface is avail
 
 Start by cloning this repository and create your models directory:
 ```
-git clone https://github.com/CollectivaT-dev/TTS-API.git
+git clone https://github.com/proxectonos/NOS-TTS-API.git
 cd TTS-API
 mkdir models
 ```
