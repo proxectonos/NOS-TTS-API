@@ -18,6 +18,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install  --quiet --upgrade pip && \
     pip install  --quiet pip-tools
 
+RUN pip install spacy==3.7.5 #new line to avoid version conflict with coqui
+
 COPY . /app
 
 RUN dpkg -i /app/deb/cotovia_0.5_amd64.deb  #or cotovia_0.5_i386.deb depending on your architecture
