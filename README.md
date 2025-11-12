@@ -86,7 +86,7 @@ Here is an example `config.json`:
     + `preprocessor`: The specific text preprocessor to use (e.g., "cotovia_preprocessor").
     + `tts_config_path`: The path to the model's configuration file
     + `tts_model_path`: The path to the model's checkpoint (.pth) file.
-    + `load`: Set to true to load this model when the API server starts
+    + `load`: Set to true to load this model when the API server starts.
 
 ### Paths
 The paths in `tts_config_path` and `tts_model_path` can be either absolute or relative.
@@ -254,4 +254,9 @@ This interface allows you to test all loaded voices directly from your browser.
 
 To change the header image on the demo page, simply replace the `static/nos_tts.svg` file with your own image.
 
-<img src="img/default-demo-page.png" alt="Demo TTS interface" width="650">
+<img src="img/default-demo-page.png" alt="Demo TTS interface" width="550">
+
+
+## Acknowledgements
+
+We would like to acknowledge [Col·lectivaT](https://collectivat.cat/) for their collaboration in developing this REST API.
