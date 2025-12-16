@@ -2,7 +2,7 @@
 # Prerequisite: download appropriate cotovia deb packages to <project-dir>/deb
 # https://sourceforge.net/projects/cotovia/files/Debian%20packages/
 
-FROM python:3.10.9-slim-buster
+FROM python:3.10-slim-bookworm
 
 # Project setup
 
