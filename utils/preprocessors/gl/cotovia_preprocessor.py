@@ -96,7 +96,10 @@ def to_cotovia(text):
     # utf-8 to iso8859-1
     subprocess.run(["iconv", "-f", "utf-8", "-t", "iso8859-1", COTOVIA_IN_TXT_PATH, "-o", COTOVIA_IN_TXT_PATH_ISO], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     print("Preprocessing text with Cotovía...")
-    subprocess.run(["cotovia", "-i", COTOVIA_IN_TXT_PATH_ISO, "-p"], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    #subprocess.run(["cotovia", "-n", "-p", "-S", ">", COTOVIA_IN_TXT_PATH_ISO,], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    with open(COTOVIA_OUT_PRE_PATH, 'w') as out_f, open(COTOVIA_IN_TXT_PATH_ISO, 'r') as in_f:
+        subprocess.run(["cotovia", "-n", "-p", "-S"], stdin=in_f, stdout=out_f, stderr=subprocess.STDOUT)
+    #print(COTOVIA_IN_TXT_PATH_ISO)
     subprocess.run(["iconv", "-f", "iso8859-1", "-t", "utf-8", COTOVIA_OUT_PRE_PATH, "-o", COTOVIA_OUT_PRE_PATH_UTF8], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     # print COTOVIA_OUT_PRE_PATH_UTF8 content with open
     with open(COTOVIA_OUT_PRE_PATH_UTF8, 'r') as f:
@@ -127,7 +130,10 @@ def text_preprocess(text):
     # convert list to string
     cotovia_preproc_text_res = ' '.join(cotovia_preproc_text)
     
-    print("cotovia_preproc_text: ", cotovia_preproc_text)
+    # print("cotovia_preproc_text: ", cotovia_preproc_text)
+
+    # remove extra spaces
+    cotovia_preproc_text_res = re.sub(r"\s+", r" ", cotovia_preproc_text_res)
 
     # add final punctuation mark if it is not present
     if not re.match(r"[.!?]", cotovia_preproc_text_res[-1]):
